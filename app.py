@@ -4,6 +4,7 @@ import numpy as np
 from scipy.io.wavfile import write
 
 
+
 def reverse_audio(audio):
     sr, data = audio
 
@@ -31,10 +32,9 @@ input_audio = gr.Audio(
     ),
 )
 
-
 if __name__ == "__main__":
     # 创建一个 Gradio 接口
-    gr.Interface(fn=reverse_audio, inputs=input_audio, outputs="audio", title="录音器").launch()
+    gr.Interface(fn=reverse_audio, inputs=input_audio, outputs="audio", title="录音器").launch(server_name="0.0.0.0")
 
 
 

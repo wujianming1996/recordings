@@ -11,7 +11,7 @@ RUN mkdir recordings
 COPY . /app
 
 # 安装项目依赖
-RUN pip install gradio
+RUN pip install -r /app/requirements.txt
 
 # 暴露端口 7860
 EXPOSE 7860
